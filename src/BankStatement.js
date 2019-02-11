@@ -10,4 +10,8 @@ class BankStatement {
     singleTransaction.push(amount)
     this.transactionHistory.push(singleTransaction)
   }
+
+   withdraw(amount) {
+    this.balance -= amount
+  }
 }
