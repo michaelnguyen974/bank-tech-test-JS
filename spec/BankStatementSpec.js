@@ -27,4 +27,10 @@ describe("BankStatement", () => {
     statement.withdraw(20)
     expect(statement.balance).toEqual(30)
   })
+
+  it("checks the transaction history when money has been deposited and withdrawn", () => {
+    statement.deposit(50)
+    statement.withdraw(20)
+    expect(statement.transactionHistory).toEqual([[50], [20]])
+  })
 })
