@@ -8,8 +8,12 @@ describe("BankStatement", () => {
     expect(statement.balance).toEqual(0)
   })
 
-  it("checks if we can add an amount", () => {
+  it("checks if we can add an amount via depositing", () => {
     statement.deposit(20)
     expect(statement.balance).toEqual(20)
+  })  
+
+  it("looks for transaction history array to start empty", () => {
+    expect(statement.transactionHistory).toEqual([])
   })
 })
