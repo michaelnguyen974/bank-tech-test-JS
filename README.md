@@ -1,5 +1,4 @@
 # bank-tech-test-JS
-# bank-tech-test
 ## user stories
 
 ```
