@@ -16,4 +16,9 @@ describe("BankStatement", () => {
   it("looks for transaction history array to start empty", () => {
     expect(statement.transactionHistory).toEqual([])
   })
+
+  it("will check to see if a singular transaction exists in transaction history", () => {
+    statement.deposit(20)
+    expect(statement.transactionHistory).toEqual([[20]])
+  })
 })
