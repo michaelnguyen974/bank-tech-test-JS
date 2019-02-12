@@ -11,8 +11,8 @@ class Account {
   };
 
    withdraw(amount) {
-    this.history.transactions.push(amount)
     this.balance -= amount
+    this.history.addTransaction(-amount, this.balance)
   };
 
 };
