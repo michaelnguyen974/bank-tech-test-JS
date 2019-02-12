@@ -6,12 +6,12 @@ describe("Account", () => {
   })
 
   it("checks if Account has balance of 0", () => {
-    expect(account.balance).toEqual(0)
+    expect(account.balance).toEqual(0.00)
   })
 
   it("checks if we can add an amount via depositing", () => {
-    account.deposit(20)
-    expect(account.balance).toEqual(20)
+    account.deposit(20.50)
+    expect(account.balance).toEqual(20.50)
   })  
 
   it("checks to see if money is withdrawn and balance decreases", () => {

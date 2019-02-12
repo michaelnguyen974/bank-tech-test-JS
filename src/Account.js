@@ -1,7 +1,7 @@
 class Account {
 
   constructor(accountHistory = new AccountHistory) {
-    this.balance = 0
+    this.balance = 0.00
     this.history = accountHistory
   };
 
