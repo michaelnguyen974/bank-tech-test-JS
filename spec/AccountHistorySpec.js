@@ -8,4 +8,8 @@ describe("AccountHistory", () => {
     expect(accountHistory.transactions).toEqual([])
   })
 
+  it("add transaction will add hash to the array", () => {
+    expect(accountHistory.addTransaction()).toBeDefined();
+  })
+
 })
