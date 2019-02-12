@@ -21,13 +21,13 @@ describe("Account", () => {
 
   it("will check to see if a singular transaction exists in transaction history", () => {
     account.deposit(20)
-    expect(account.history.transactions).toEqual([[20]])
+    expect(account.history.transactions).toEqual([20])
   })
   
   it("checks the transaction history when money has been deposited and withdrawn", () => {
     account.deposit(50)
     account.withdraw(20)
-    expect(account.history.transactions).toEqual([[50], [20]])
+    expect(account.history.transactions).toEqual([50, 20])
   })
 
 })

@@ -6,16 +6,12 @@ class Account {
   };
 
   deposit(amount) {
-    var singleTransaction = []
-    singleTransaction.push(amount)
-    this.history.transactions.push(singleTransaction)
+    this.history.transactions.push(amount)
     this.balance += amount 
   };
 
    withdraw(amount) {
-    var singleTransaction = []
-    singleTransaction.push(amount)
-    this.history.transactions.push(singleTransaction)
+    this.history.transactions.push(amount)
     this.balance -= amount
   };
 
