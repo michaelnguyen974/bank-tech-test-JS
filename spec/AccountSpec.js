@@ -30,4 +30,9 @@ describe("Account", () => {
     expect(account.history.transactions).toEqual([50, 20])
   })
 
+  it("add transaction method will add a hash to the transactions array", () => {
+    account.history.addTransaction()
+    expect(account.history.transactions).toEqual([{}])
+  })
+
 })
