@@ -1,7 +1,14 @@
 class Statement {
-  
-  transactionHistory(transactions) {
-    
-  }
 
+  transactionHistory(transactions) {
+    var output = transactions
+      output.forEach( function(singleTransaction) {
+      "\n" + singleTransaction.join(' || ')
+    }) 
+  };
+  
+  statementHeader() {
+    'date || credit || debit || balance'
+  }
+  
 }
