@@ -1,4 +1,4 @@
-class Account {
+class AccountHistory {
   constructor() {
     this.transactionHistory = []
   }

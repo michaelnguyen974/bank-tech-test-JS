@@ -13,24 +13,21 @@ describe("BankStatement", () => {
     expect(statement.balance).toEqual(20)
   })  
 
-  it("looks for transaction history array to start empty", () => {
-    expect(statement.transactionHistory).toEqual([])
-  })
-
-  it("will check to see if a singular transaction exists in transaction history", () => {
-    statement.deposit(20)
-    expect(statement.transactionHistory).toEqual([[20]])
-  })
-
   it("checks to see if money is withdrawn and balance decreases", () => {
     statement.deposit(50)
     statement.withdraw(20)
     expect(statement.balance).toEqual(30)
   })
 
+  it("will check to see if a singular transaction exists in transaction history", () => {
+    statement.deposit(20)
+    expect(statement.account.transactionHistory).toEqual([[20]])
+  })
+  
   it("checks the transaction history when money has been deposited and withdrawn", () => {
     statement.deposit(50)
     statement.withdraw(20)
-    expect(statement.transactionHistory).toEqual([[50], [20]])
+    expect(statement.account.transactionHistory).toEqual([[50], [20]])
   })
+
 })
