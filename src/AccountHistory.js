@@ -3,8 +3,7 @@ class AccountHistory {
     this.transactions = []
   }
 
-  addTransaction(amount, balance) {
-    var date = new Date("02/12/2019");
+  addTransaction(amount, balance, date = new Date("2019, 02, 12")) {
     var hash = {"date": date, "deposit": null, "withdraw": null, "balance": balance}
     if (amount > 0) {
       hash.deposit = amount
