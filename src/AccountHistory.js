@@ -4,7 +4,8 @@ class AccountHistory {
   }
 
   addTransaction() {
-
+    var hash = {}
+    this.transactions.push(hash)
   }
 
 }
