@@ -3,12 +3,12 @@ class AccountHistory {
     this.transactions = []
   }
 
-  addTransaction(deposit, balance) {
+  addTransaction(amount, balance) {
     var hash = {"deposit": null, "withdraw": null,"balance": balance}
-    if (deposit > 0) {
-      hash.deposit = deposit 
+    if (amount > 0) {
+      hash.deposit = amount
     } else {
-      hash.withdraw = deposit
+      hash.withdraw = amount
     }
     this.transactions.push(hash)
   }
