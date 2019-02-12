@@ -1,21 +1,21 @@
-class BankStatement {
+class Account {
 
-  constructor(account = new AccountHistory) {
+  constructor(accountHistory = new AccountHistory) {
     this.balance = 0
-    this.account = account
+    this.history = accountHistory
   };
 
   deposit(amount) {
     var singleTransaction = []
     singleTransaction.push(amount)
-    this.account.transactionHistory.push(singleTransaction)
+    this.history.transactions.push(singleTransaction)
     this.balance += amount 
   };
 
    withdraw(amount) {
     var singleTransaction = []
     singleTransaction.push(amount)
-    this.account.transactionHistory.push(singleTransaction)
+    this.history.transactions.push(singleTransaction)
     this.balance -= amount
   };
 

@@ -1,5 +1,6 @@
 class AccountHistory {
   constructor() {
-    this.transactionHistory = []
+    this.transactions = []
   }
 }
+
