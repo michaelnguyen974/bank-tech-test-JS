@@ -4,7 +4,8 @@ class AccountHistory {
   }
 
   addTransaction(amount, balance) {
-    var hash = {"deposit": null, "withdraw": null,"balance": balance}
+    var date = new Date("02/12/2019");
+    var hash = {"date": date, "deposit": null, "withdraw": null, "balance": balance}
     if (amount > 0) {
       hash.deposit = amount
     } else {
