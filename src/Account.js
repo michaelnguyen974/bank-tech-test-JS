@@ -10,9 +10,10 @@ class Account {
     this.history.addTransaction(amount, this.balance)
   };
 
-   withdraw(amount) {
+  withdraw(amount) {
     this.balance -= amount
     this.history.addTransaction(-amount, this.balance)
   };
+
 
 };

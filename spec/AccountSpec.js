@@ -30,4 +30,9 @@ describe("Account", () => {
     expect(account.history.transactions).toEqual([{"deposit": 100, "withdraw": null ,"balance": 100}, {"deposit": null, "withdraw": -20 ,"balance": 80}])
   })
 
+  it("looks for date in a single transaction", () => {
+    account.deposit(100)
+    expect(account.history.transactions).toEqual([{"date": "12/02/2019","deposit": 100, "withdraw": null ,"balance": 100}])
+  })
+
 })
