@@ -36,4 +36,9 @@ describe("Account", () => {
     expect(account.history.transactions).toEqual([{"date": date,"deposit": 100, "withdraw": null ,"balance": 100}])
   })
 
+  it("Account class will be able to print the array of hashes", () => {
+    account.transactionHistory(this.history.transactions)
+    expect(account.printStatement()).toContain('date || credit || debit || balance')
+  })
+
 })
