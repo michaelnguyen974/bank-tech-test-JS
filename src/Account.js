@@ -6,8 +6,8 @@ class Account {
   };
 
   deposit(amount) {
-    this.history.transactions.push(amount)
     this.balance += amount 
+    this.history.addTransaction(amount, this.balance)
   };
 
    withdraw(amount) {

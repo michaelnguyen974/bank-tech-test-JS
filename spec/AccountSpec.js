@@ -19,20 +19,20 @@ describe("Account", () => {
     expect(account.balance).toEqual(30)
   })
 
-  it("will check to see if a singular transaction exists in transaction history", () => {
-    account.deposit(20)
-    expect(account.history.transactions).toEqual([20])
-  })
+  // it("will check to see if a singular transaction exists in transaction history", () => {
+  //   account.deposit(20)
+  //   expect(account.history.transactions).toEqual([20])
+  // })
   
-  it("checks the transaction history when money has been deposited and withdrawn", () => {
-    account.deposit(50)
-    account.withdraw(20)
-    expect(account.history.transactions).toEqual([50, 20])
-  })
+  // it("checks the transaction history when money has been deposited and withdrawn", () => {
+  //   account.deposit(50)
+  //   account.withdraw(20)
+  //   expect(account.history.transactions).toEqual([50, 20])
+  // })
 
   it("add transaction method will add a hash to the transactions array", () => {
-    account.history.addTransaction()
-    expect(account.history.transactions).toEqual([{}])
+    account.deposit(20)
+    expect(account.history.transactions).toEqual([{"deposit": 20, "balance": 20}])
   })
 
 })
