@@ -37,8 +37,7 @@ describe("Account", () => {
   })
 
   it("Account class will be able to print the array of hashes", () => {
-    account.statement.transactionHistory(this.history.transactions)
-    expect(account.printStatement()).toContain('date || credit || debit || balance')
+    expect(account.print()).toContain('date || credit || debit || balance')
   })
 
 })
