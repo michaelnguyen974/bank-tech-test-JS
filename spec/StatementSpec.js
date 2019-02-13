@@ -1,10 +1,10 @@
-describe("Statement", () => {
+/* eslint-disable no-undef */
+describe('Statement', () => {
+  beforeEach(() => {
+    statement = new Statement();
+  });
 
-  beforeEach( () => {
-    statement = new Statement;
-  })
-
-  it("will check if statement contains individual transactions", () => {
-    expect(statement.display).toBeDefined()
-  })
-})
+  it('will check if statement contains individual transactions', () => {
+    expect(statement.display).toBeDefined();
+  });
+});

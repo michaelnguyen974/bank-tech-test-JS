@@ -1,12 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
 class Statement {
-  constructor() {}
-
-  display(transactions) {
-   
-  };
-  
-  statementHeader() {
-    'date || credit || debit || balance'
+  display() {
   }
-  
+
+  statementHeader() {
+    'date || credit || debit || balance';
+  }
 }
