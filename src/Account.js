@@ -21,7 +21,7 @@ class Account {
     let bankstatement = 'date || credit || debit || balance';
     this.history.transactions.forEach((transaction) => {
       Object.keys(transaction).forEach((key) => {
-        bankstatement += `${transaction[key]}`;
+        bankstatement += `${transaction[key]} ||` + '\n';
       });
     });
     return bankstatement;

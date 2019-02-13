@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 describe('Account', () => {
   beforeEach(() => {
     account = new Account();
-    date = new Date('02/12/2019');
+    date = new Date().toLocaleDateString();
   });
 
   it('checks if Account has balance of 0', () => {

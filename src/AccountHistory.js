@@ -1,9 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 class AccountHistory {
   constructor() {
     this.transactions = [];
   }
 
-  addTransaction(amount, balance, date = new Date('2019, 02, 12')) {
+  addTransaction(amount, balance, date = new Date().toLocaleDateString()) {
     const hash = {
       date, deposit: null, withdraw: null, balance,
     };
