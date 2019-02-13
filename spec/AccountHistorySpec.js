@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('AccountHistory', () => {
   beforeEach(() => {
     accountHistory = new AccountHistory();

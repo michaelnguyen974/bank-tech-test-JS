@@ -1,5 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-useless-concat */
+/* eslint-disable no-undef */
+
 class Account {
   constructor(accountHistory = new AccountHistory(), statement = new Statement()) {
     this.history = accountHistory;
@@ -20,7 +22,7 @@ class Account {
   print() {
     let bankstatement = 'date || credit || debit || balance';
     this.history.transactions.forEach((transaction) => {
-      bankstatement += '`\n`' + `${transaction.date} || ` + `${transaction.deposit} ||` + `${transaction.withdraw} ||` + `${this.balance}`;
+      bankstatement += '`\n`' + `${transaction.date} || ` + `${transaction.deposit} ||` + `${Math.abs(transaction.withdraw)} ||` + `${transaction.balance}`;
     });
     return bankstatement;
   }
