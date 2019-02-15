@@ -20,7 +20,7 @@ class Account {
   }
 
   print() {
-    let bankstatement = 'date || credit || debit || balance';
+    let bankstatement = this.statement.statementHeader();
     this.history.transactions.forEach((transaction) => {
       bankstatement += '`\n`' + `${transaction.date} || ` + `${transaction.deposit} ||` + `${Math.abs(transaction.withdraw)} ||` + `${transaction.balance}`;
     });
