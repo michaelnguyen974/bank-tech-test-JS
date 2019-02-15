@@ -6,7 +6,7 @@ class AccountHistory {
 
   addTransaction(amount, balance, date = new Date().toLocaleDateString()) {
     const hash = {
-      date, deposit: null, withdraw: null, balance,
+      date, deposit: '', withdraw: '', balance,
     };
     if (amount > 0.00) {
       hash.deposit = amount;

@@ -23,7 +23,7 @@ describe('Account', () => {
   it('add transaction method will add a hash to the transactions array', () => {
     account.deposit(20);
     expect(account.history.transactions).toEqual([{
-      date, deposit: 20, withdraw: null, balance: 20,
+      date, deposit: 20, withdraw: '', balance: 20,
     }]);
   });
 
@@ -31,16 +31,16 @@ describe('Account', () => {
     account.deposit(100);
     account.withdraw(20);
     expect(account.history.transactions).toEqual([{
-      date, deposit: 100, withdraw: null, balance: 100,
+      date, deposit: 100, withdraw: '', balance: 100,
     }, {
-      date, deposit: null, withdraw: -20, balance: 80,
+      date, deposit: '', withdraw: -20, balance: 80,
     }]);
   });
 
   it('looks for date in a single transaction', () => {
     account.deposit(100);
     expect(account.history.transactions).toEqual([{
-      date, deposit: 100, withdraw: null, balance: 100,
+      date, deposit: 100, withdraw: '', balance: 100,
     }]);
   });
 
