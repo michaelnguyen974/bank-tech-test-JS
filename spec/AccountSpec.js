@@ -45,6 +45,7 @@ describe('Account', () => {
   });
 
   it('Account class will be able to print the array of hashes', () => {
-    expect(account.print()).toContain('date || credit || debit || balance');
+    account.deposit(20);
+    expect(account.print()).toContain(date || credit || debit || balance, 15/02/2019 || 20 ||0 ||20);
   });
 });
