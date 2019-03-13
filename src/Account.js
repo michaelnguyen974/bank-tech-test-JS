@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-useless-concat */
-/* eslint-disable no-undef */
-
 class Account {
   constructor(accountHistory = new AccountHistory(), statement = new Statement()) {
     this.history = accountHistory;
